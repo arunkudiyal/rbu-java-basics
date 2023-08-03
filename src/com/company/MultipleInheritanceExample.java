@@ -14,16 +14,20 @@ class First {
 }
 
 interface Second {
+    String data2 = "Hello World";
     public void showDetails();
 }
-
-class Demo extends First implements Second {
+interface Third {
+    public void display();
+}
+class Demo extends First implements Second, Third {
     Demo(int data1, String data2) {
         super(data1, data2);
     }
     public void showDetails() {
         System.out.println("Demo implemented Second");
     }
+    public void display() { System.out.println("Demo implemented Third"); }
 }
 
 public class MultipleInheritanceExample {
